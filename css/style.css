@@ -5,6 +5,13 @@ body{
 h1{
     font-size: 4rem !important;
 }
+ul{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+ul li{
+    margin-bottom: 1.1rem;
+}
 .clearfix{
     content:'';
     clear:both;
@@ -21,12 +28,12 @@ body .header{
 .main-header > .container-fluid > .header{
     margin-bottom: 200px;
 }
-body .topic{
+body{
     color: #262523;
     font-family: 'Ubuntu',Arial,sans-serif;
 }
 
-@media(min-width: 400px) {
+@media(min-width: 800px) {
     .header{
         width: 60%;
         margin-bottom: 50px;
@@ -38,12 +45,10 @@ body .topic{
     h1{
         margin-bottom: 100px;
     }
-    ul li{
-        margin-bottom: 1.1em;
-    }
 }
 .topic{
     margin-bottom: 100px;
+    border-bottom: 3px dashed #f4ddde;
 }
 .topic-1 .content{
     padding: 0 50px;
@@ -55,15 +60,24 @@ body .topic{
     border-left: 5px solid #262523;
     padding-top: 5%;
     padding-left: 10%;
+    margin-bottom: 10px;
 }
-.topic-2 img{
+.image-left-float{
     width: 40%;
     min-width: 300px;
     float: left;
     padding-right: 20px;
 }
-.topic-2 ul{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-bottom: 3px dashed #262523;
+.topic-3 ul{
+    list-style-position: inside;
+    clear:both;
+    display: inline-block;
+}
+.footnote{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #2b3040;
+    color: #ebe3dc;
+    border: none;
+    font-size: 2rem !important;
 }
