@@ -1,0 +1,49 @@
+body{
+    background-color: #fff6ed;
+    font-size: 20px;
+}
+h1{
+    font-size: 4rem !important;
+}
+.clearfix:after{
+    content:'';
+    clear:both;
+    display:table;
+}
+body .header{
+    font-family: 'Georgia',serif;
+    color: #262523;
+    text-align: left;
+}
+.main-header{
+    padding-top: 280px;
+}
+body .topic{
+    color: #262523;
+    font-family: 'Ubuntu',Arial,sans-serif;
+}
+
+@media(min-width: 400px) {
+    .header{
+        padding-left: 20%;
+        padding-right: 5%;
+        width: 65%;
+        margin-bottom: 50px;
+    }
+    h1{
+        margin-bottom: 100px;
+    }
+}
+
+.content{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.topic-1 .item:first-child{
+    padding-right: 5%;   
+}
+.topic-1 .item:last-child{
+    border-left: 5px solid #262523;
+    padding-top: 5%;
+    padding-left: 10%;
+}
