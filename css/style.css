@@ -16,7 +16,10 @@ body .header{
     text-align: left;
 }
 .main-header{
-    padding-top: 280px;
+    padding-top: 150px;
+}
+.main-header > .container-fluid > .header{
+    margin-bottom: 200px;
 }
 body .topic{
     color: #262523;
@@ -25,19 +28,25 @@ body .topic{
 
 @media(min-width: 400px) {
     .header{
-        padding-left: 20%;
-        padding-right: 5%;
-        width: 65%;
+        width: 60%;
         margin-bottom: 50px;
+    }
+    .set-horizontal-padding{
+        padding-left: 15%;
+        padding-right: 15%;
     }
     h1{
         margin-bottom: 100px;
     }
+    ul li{
+        margin-bottom: 1.1em;
+    }
 }
-
-.content{
-    padding: 0 50px;
+.topic{
     margin-bottom: 100px;
+}
+.topic-1 .content{
+    padding: 0 50px;
 }
 .topic-1 .item:first-child{
     padding-right: 5%;   
@@ -46,4 +55,7 @@ body .topic{
     border-left: 5px solid #262523;
     padding-top: 5%;
     padding-left: 10%;
+}
+.topic-2 img{
+    width: 100%;
 }
