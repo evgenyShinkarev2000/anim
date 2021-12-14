@@ -22,6 +22,5 @@ for (let i = 0; i < len; i++){
         const element = hiddens[i];
         element.style.opacity = "0";
         element.style.display = "none";
-
     })
 }

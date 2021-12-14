@@ -214,3 +214,50 @@ body{
     background-color: #2b3040;
     padding: 4rem 2rem;
 }
+.topic-9 .header{
+    margin-bottom: 20px;
+}
+.topic-9 img{
+    float: left;
+    margin-right: 10%;
+}
+.topic-9 p{
+    padding-top: 5%;
+}
+.drag-task table{
+    border-collapse: collapse;
+    border: solid black 2px;
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    background-color: white;
+}
+.drag-task table td{
+    padding: 1rem 2rem;
+}
+.drag-task table tr{
+    border-bottom: 2px solid black;
+}
+.drag-task table tr:last-child{
+    border-bottom: none;
+}
+.drag-task tr td:nth-child(2){
+    border-left: 2px solid black;
+}
+.drag-task table td:nth-child(2){
+    width: 70%;
+}
+.drag-task .answer{
+    margin: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    box-shadow: 0px 2px 8px 0px black;
+}
+.drag-task button{
+    margin-top: 2rem;
+    border-radius: 10px;
+    border: 3px solid #adadad;
+    padding: 5px 10px;
+}
