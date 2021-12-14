@@ -50,17 +50,18 @@ body{
     margin-bottom: 100px;
     border-bottom: 3px dashed #f4ddde;
 }
-.small-horizontal-padding{
-    padding: 0 50px;
-}
-.topic-1 .item:first-child{
-    padding-right: 10%;   
+.topic-1 .item:first-child p{
+    border-right: 4px solid #262523;
+    padding-right: 10%; 
 }
 .topic-1 .item:last-child{
-    border-left: 5px solid #262523;
-    padding-top: 5%;
+    
     padding-left: 5%;
     margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.topic-1 .item:last-child p{
+    margin-top: 10%;
 }
 .image-left-float{
     width: 40%;
@@ -81,33 +82,56 @@ body{
     border: none;
     font-size: 2rem !important;
 }
-.topic-4 .content{
-    vertical-align: top;
+/* topic-4 надо адаптировать под ширину менее 1920px */
+.topic-4 img{
+    width: 40%;
+    min-width: 300px;
 }
-.topic-4 .item:nth-child(1){
-    display: inline-block;
-    width: 50%;
+.topic-4 .top-block .img-1{
+    margin-top: -5%;
+    transform: rotate(-15deg);
+    vertical-align: top;
+    float: right;
+    margin-left: 10%;
+}
+.topic-4 .bottom-block .img-2{
+    float: left;
+    vertical-align: top;
+    margin-top: -5%;
+    margin-left: -8%;
+    margin-right: -4%;
+}
+.topic-4 .bottom-block .item-text-1{
+    margin-right: 28%;
+    margin-top: -7%;
+    margin-bottom: 5%;
+}
+.topic-4 .bottom-block .item-text-2{
+    padding-left: 35%;
     padding-right: 5%;
 }
-.topic-4 .item:nth-child(2){
-    width: 50%;
-    display: inline-block;
-    margin-bottom: 50px;
-    margin-left: -1em;
-    padding-left: 5%;
+.topic-4 .bottom-block .item-footnote{
+    clear: both;
+    width: 35%;
 }
-.topic-4 .item:nth-child(3){
-    padding: 0 10% 0 10%;
-    text-align: left;
-    margin-bottom: 50px;
-}
+
 .topic-5 .header{
     margin-bottom: 1rem;
 }
 .topic-5 .item{
-    padding: 0 30%;
+    margin: 0 20%;
+    padding: 5px;
     border: 3px solid #fff6ed;
     height: 100%;
+}
+.topic-5 .col-md-4:first-child .item{
+    margin-left: 0;
+}
+.topic-5 .col-md-4:last-child .item{
+    margin-right: 0;
+}
+.topic-5 .col-md-4:nth-child(2) .item{
+    margin: 0 10%;
 }
 .topic-5 .item:hover{
     border-color: black;
@@ -121,4 +145,33 @@ body{
 .topic-6 ul{
     padding-left: 50px;
     list-style: square;
+}
+.topic-7 .header {
+    margin-bottom: 5%;
+}
+.topic-7 .header p{
+    padding-left: 1rem;
+}
+.topic-7 .hidden{
+    opacity: 0;
+    text-align: left;
+    background-color: #2b3040;
+    position: absolute;
+    top: -50%;
+    vertical-align: top;
+    color: #fff6ed;
+    padding: 10px;
+}
+.topic-7 .hidden:hover{
+    opacity: 1;
+    transition: 0.3s;
+}
+.topic-7 table td{
+    vertical-align: top;
+    width: 20%;
+    text-align: center;
+    position: relative;
+}
+.topic-7 table {
+    margin-bottom: 200px;
 }
