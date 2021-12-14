@@ -162,7 +162,7 @@ body{
     color: #fff6ed;
     padding: 10px;
 }
-.topic-7 .hidden:hover{
+.topic-7 td:hover .hidden{
     opacity: 1;
     transition: 0.3s;
 }
@@ -174,4 +174,43 @@ body{
 }
 .topic-7 table {
     margin-bottom: 200px;
+}
+.topic-8 .content{
+    min-height: 600px;
+}
+.topic-8 table{
+    width: 100%;
+}
+.topic-8 td{
+    padding: 10px 0;
+    border-collapse: collapse;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+.topic-8 td p::after{
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url("../img/2555167_arrow_forwar.png") no-repeat 0 0;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    left: 3%;
+}
+.topic-8 td p:hover::after{
+    transition: 0.3s;
+    left: 5%;
+}
+.topic-8 td p{
+    margin: 0;
+}
+.topic-8 .hidden{
+    opacity: 0;
+    display: none;
+    vertical-align: middle;
+    margin-top: -10%;
+    color: #fff6ed;
+    background-color: #2b3040;
+    padding: 4rem 2rem;
 }
