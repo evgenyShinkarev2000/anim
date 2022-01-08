@@ -55,8 +55,7 @@ function initDragDropTask(className){
 
     shuffle(answers).forEach(answer => answersHolder.append(answer));
 
-    console.log(questAnswerDict);
-    debugger;
+    // console.log(questAnswerDict);
 
     button.onclick = () => {
         answerQuestRows.forEach(row => {

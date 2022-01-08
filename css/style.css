@@ -50,9 +50,25 @@ body{
     margin-bottom: 100px;
     border-bottom: 3px dashed #f4ddde;
 }
+.topic-1 .item{
+    position: relative;
+}
 .topic-1 .item:first-child p{
-    border-right: 4px solid #262523;
+    border-right: 4px solid transparent;
     padding-right: 10%; 
+}
+.topic-1 .item:first-child::after{
+    display: block;
+    content: "";
+    width: 5%;
+    height: 80%;
+    background-image: url(../img/verticalLine.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    position: absolute;
+    top: 3%;
+    right: 0;
 }
 .topic-1 .item:last-child{
     
@@ -71,7 +87,7 @@ body{
 }
 .topic-3 ul{
     list-style-position: inside;
-    clear:both;
+    clear: both;
     display: inline-block;
 }
 .footnote{
