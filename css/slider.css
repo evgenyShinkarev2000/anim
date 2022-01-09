@@ -2,8 +2,7 @@
     padding-bottom: 100px;
 }
 .slider-1 img{
-    max-width: 100%;
-    max-height: 100%;
+    display: flex;
 }
 .slider-1 .slider.set-horizontal-padding{
     padding-left: 10%;

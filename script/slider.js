@@ -7,42 +7,6 @@ function offset(element){
     return {top: top, left: left, bottom: top + element.offsetHeight, right: left + element.offsetWidth};
 }
 
-// const animeItem = document.querySelector(".block-anime");
-// const start = animeItem.querySelector(".begin-anime");
-// const end = animeItem.querySelector(".end-anime");
-// const frezeItems = animeItem.querySelectorAll("img");
-
-// window.addEventListener("scroll", () => {
-//     // console.log(`offsetY = ${scrollY} startY = ${offset(animeItem).top}`)
-//     if (scrollY >= offset(start).top){
-
-//         console.log(`${offset(start).top} start`);
-//         console.log(`${offset(end).top} end`);
-
-//         if (scrollY >= offset(end).top){
-//             frezeItems.forEach(e => {
-//                 e.style.position = "relative";
-//             });
-
-//         } else {
-//             frezeItems.forEach(e => {
-//                 e.style.position = "fixed";
-//                 e.style.top = "0";
-//             });
-//             frezeItems[0].style.left = "50px";
-//             frezeItems[1].style.right = "50px";
-//         }
-//     }
-//     else{
-//         frezeItems.forEach(e => {
-//             e.style.position = "relative";
-//             e.style.left = "auto";
-//             e.style.top = "auto";
-//             e.style.right = "auto";
-//         })
-//     }
-// })
-
 const animeBlock = document.querySelector(".slider-1");
 const animeItems = animeBlock.querySelectorAll("img");
 let isFixed = false;
@@ -77,4 +41,12 @@ window.addEventListener("scroll", () => {
             e.style.top = topFixed - topStatic + "px";
         })
     }
+})
+window.addEventListener("resize", () => {
+    console.log("reize");
+    animeItems.forEach(e => {
+        const parent = e.parentElement;
+        e.style["max-width"] = parent.offsetWidth + "px";
+        e.style["max-height"] = parent.offsetHeight + "px";
+    })
 })
