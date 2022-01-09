@@ -1,7 +1,7 @@
-function offset(element){
+export function offset(element){
     const rect = element.getBoundingClientRect();
-    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const top = rect.top + scrollTop;
     const left = rect.left + screenLeft;
     return {top: top, left: left, bottom: top + element.offsetHeight, right: left + element.offsetWidth};
@@ -18,7 +18,7 @@ window.addEventListener("scroll", () => {
         isFixed = true;
         animeItems.forEach(e => {
             e.style.position = "static";
-            eOffset = offset(e);
+            const eOffset = offset(e);
             const top = eOffset.top - offsetAnimeBlock.top;
             e.style.position = "fixed";
             e.style.top = `${top}px`;
@@ -43,7 +43,7 @@ window.addEventListener("scroll", () => {
     }
 })
 window.addEventListener("resize", () => {
-    console.log("reize");
+    // console.log("reize");
     animeItems.forEach(e => {
         const parent = e.parentElement;
         e.style["max-width"] = parent.offsetWidth + "px";

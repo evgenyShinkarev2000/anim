@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/transition-anime.css">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
             </div>
             <div class="content set-horizontal-padding">
                 <div class="row">
-                    <div class="col-md-6 item">
+                    <div class="col-md-6 item before-anime">
                         <p>
                             Интернет и компьютерные технологии
                             в целом – слишком быстро развивающаяся отрасль, чтобы хоть кто-нибудь понимал,
@@ -34,7 +35,7 @@
                             говорящий помощник или вход в телефон по отпечатку пальца.
                         </p>
                     </div>
-                    <div class="col-md-6 item">
+                    <div class="col-md-6 item before-anime">
                         <p>
                             Информационная безопасность затрагивает каждого из нас. На определенном этапе развития
                             информационной
@@ -56,13 +57,13 @@
                 <h2><b>Субъекты в информационной безопасности</b></h2>
             </div>
             <div class="content set-horizontal-padding">
-                <p>Субъект – это активный компонент информационной системы, оказывающий воздействие на потоки информации
+                <p class="left-offset">Субъект – это активный компонент информационной системы, оказывающий воздействие на потоки информации
                     или объекты системы.
                     Подход к проблемам информационной безопасности необходимо начинать с выявления субъектов,
                     заинтересованных в обеспечении:
                 </p>
-                <img src="img/Private_data-bro_1.webp" alt="Картинка с пунктами списка" class="image-left-float">
-                <ul>
+                <img src="img/Private_data-bro_1.webp" alt="Картинка с пунктами списка" class="image-left-float hidden-img">
+                <ul class="right-offset">
                     <li>своевременного доступа (за приемлемое для них время)
                         к необходимой им информации;</li>
                     <li>конфиденциальности (сохранения в тайне) определенной части информации;</li>
@@ -78,7 +79,7 @@
                     <li>возможности осуществления непрерывного контроля
                         и управления процессами обработки и передачи информации.</li>
                 </ul>
-                <p><i>Очевидно</i>, что обеспечение этих требований существенно
+                <p class="left-offset"><i>Очевидно</i>, что обеспечение этих требований существенно
                     и для государства в целом, и для отдельных общественных или коммерческих организаций,
                     и для предприятий, и для отдельных граждан, которые и являются субъектами информационных отношений.
                 </p>
@@ -548,7 +549,7 @@
 
     </div>
     <script src="js/bootstrap.min.js"></script>
-    <script src="script/index.js"></script>
+    <script type="module" src="script/index.js"></script>
     <script src="script/drag-drop-task.js"></script>
-    <script src="script/slider.js"></script>
+    <script type="module" src="script/slider.js"></script>
 </body>

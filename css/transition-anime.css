@@ -1,0 +1,23 @@
+.left-offset{
+    position: relative;
+    left: -200%;
+}
+.right-offset{
+    position: relative;
+    right: -200%;
+}
+.anime-left-offset{
+    left: 0;
+    transition: 1s;
+}
+.anime-right-offset{
+    right: 0;
+    transition: 1s;
+}
+.hidden-img{
+    opacity: 0;
+}
+.anime-hidden-img{
+    opacity: 1;
+    transition: 1s;
+}

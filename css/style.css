@@ -57,7 +57,32 @@ body{
     border-right: 4px solid transparent;
     padding-right: 10%; 
 }
-.topic-1 .item:first-child::after{
+.topic-1 .before-anime{
+    position: relative;
+}
+.topic-1 .before-anime:nth-child(1){
+    left: -200%;
+}
+.topic-1 .before-anime:nth-child(2){
+    right: -200%;
+}
+.topic-1 .anime:nth-child(1){
+    animation: move-right 1s forwards;
+}
+.topic-1 .anime:nth-child(2){
+    animation: move-left 1s forwards;
+}
+@keyframes move-right{
+    100%{
+        left: 0;
+    }
+}
+@keyframes move-left {
+    100%{
+        right: 0;
+    }
+}
+.topic-1 .line::after{
     display: block;
     content: "";
     width: 5%;
@@ -65,10 +90,17 @@ body{
     background-image: url(../img/verticalLine.png);
     background-size: contain;
     background-repeat: no-repeat;
-    
+    opacity: 0;
+    animation: change-opacity 1s forwards;
+    animation-delay: 1s;
     position: absolute;
     top: 3%;
     right: 0;
+}
+@keyframes change-opacity {
+    100%{
+        opacity: 1;
+    }
 }
 .topic-1 .item:last-child{
     
