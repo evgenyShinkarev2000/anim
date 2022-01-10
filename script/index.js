@@ -64,8 +64,28 @@ function doAnimeWithClassAtScroll(specifiedScrollY, className, elements, wasAnim
 
 (function animeTopic2(){
     const topic = document.querySelector(".topic-2");
-    const beginAnim = offset(topic).top - document.documentElement.clientHeight / 5;
+    const beginAnim = offset(topic).top - document.documentElement.clientHeight / 3;
     doAnimeWithClassAtScroll(beginAnim, "anime-left-offset", topic.querySelectorAll(".left-offset"), {wasAnime: false});
     doAnimeWithClassAtScroll(beginAnim, "anime-right-offset", topic.querySelectorAll(".right-offset"), {wasAnime: false});
     doAnimeWithClassAtScroll(beginAnim, "anime-hidden-img", topic.querySelectorAll(".hidden-img"), {wasAnime: false});
 })();
+
+function doAnimeWithClassAtScrollWithInterDelay(specifiedScrollY, className, delay, elements, wasAnime){
+    addEventListener("scroll", () => {
+        if (!wasAnime.wasAnime && scrollY >= specifiedScrollY){
+            let delaySum = 0;
+            wasAnime.wasAnime = true;
+            elements.forEach(e => {
+                setTimeout(() => e.classList.add(className), delaySum);
+                delaySum += delay;
+            });
+        }
+    });
+}
+
+(function animeTopic7(){
+    const topic = document.querySelector(".topic-7");
+    const beginAnim = offset(topic).top - document.documentElement.clientHeight / 2;
+    doAnimeWithClassAtScrollWithInterDelay(beginAnim, "anime-collapse-img", 500, topic.querySelectorAll(".collapse-img"), {wasAnime: false});
+    doAnimeWithClassAtScrollWithInterDelay(beginAnim, "anime-transparent", 500, topic.querySelectorAll(".transparent"), {wasAnime: false});
+})()

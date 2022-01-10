@@ -21,3 +21,23 @@
     opacity: 1;
     transition: 1s;
 }
+.collapse-img{
+    opacity: 0;
+    transform: rotate(360deg);
+    height: 0;
+    width: 0;
+}
+.anime-collapse-img{
+    transition: 1s;
+    transform: none;
+    height: auto;
+    width: auto;
+    opacity: 1;
+}
+.transparent{
+    opacity: 0;
+}
+.anime-transparent{
+    transition: 1s;
+    opacity: 1;
+}
