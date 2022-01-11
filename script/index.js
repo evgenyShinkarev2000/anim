@@ -47,7 +47,6 @@ function addAnimeClass(specifiedScrollY, elements, wasAnimeObj) {
     addEventListener("scroll",  () => {
         if (!wasAnime && scrollY + document.documentElement.clientHeight >= topicSize.bottom){
             wasAnime = true;
-            debugger;
             animeItems[0].classList.add("line");
         }
     })

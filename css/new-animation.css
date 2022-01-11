@@ -1,0 +1,42 @@
+.go{
+    animation-play-state: running;
+}
+/* RegExp doesn't work animation-name is at new line */
+.move-from-right-shift,
+.move-from-left-shift,
+.smooth-appearance,
+.roll-180,
+.roll-360,
+.from-collapse-to-auto-size{
+    animation-play-state: paused;
+    animation-duration: 1s;
+}
+.move-from-left-shift{animation-name: move-from-left-shift;}
+@keyframes move-from-left-shift {
+    from{
+        position: relative;
+        left: -200%;
+    }
+    to{
+        left: unset;
+    }
+}
+.move-from-right-shift{ animation-name: move-from-right-shift;}
+@keyframes move-from-right-shift {
+    from{
+        position: relative;
+        right: 200%;
+    }
+    to{
+        right: unset;
+    }
+}
+.smooth-appearance{animation-name: smooth-appearance; }
+@keyframes smooth-appearance {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
