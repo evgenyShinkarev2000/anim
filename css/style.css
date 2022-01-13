@@ -135,34 +135,34 @@ body{
     width: 40%;
     min-width: 300px;
 }
-.topic-4 .top-block .img-1{
-    margin-top: -5%;
-    transform: rotate(-15deg);
-    vertical-align: top;
-    float: right;
-    margin-left: 10%;
+@media(min-width: 1600px) {
+    .topic-4 .top-block .img-1{
+        margin-top: -5%;
+        vertical-align: top;
+        float: right;
+        margin-left: 10%;
+    }
+    .topic-4 .bottom-block .img-2{
+        float: left;
+        vertical-align: top;
+        margin-top: -5%;
+        margin-left: -8%;
+        margin-right: -4%;
+    }
+    .topic-4 .bottom-block .item-text-1{
+        margin-right: 28%;
+        margin-top: -7%;
+        margin-bottom: 5%;
+    }
+    .topic-4 .bottom-block .item-text-2{
+        padding-left: 35%;
+        padding-right: 5%;
+    }
+    .topic-4 .bottom-block .item-footnote{
+        clear: both;
+        width: 35%;
+    }
 }
-.topic-4 .bottom-block .img-2{
-    float: left;
-    vertical-align: top;
-    margin-top: -5%;
-    margin-left: -8%;
-    margin-right: -4%;
-}
-.topic-4 .bottom-block .item-text-1{
-    margin-right: 28%;
-    margin-top: -7%;
-    margin-bottom: 5%;
-}
-.topic-4 .bottom-block .item-text-2{
-    padding-left: 35%;
-    padding-right: 5%;
-}
-.topic-4 .bottom-block .item-footnote{
-    clear: both;
-    width: 35%;
-}
-
 .topic-5 .header{
     margin-bottom: 1rem;
 }
@@ -270,6 +270,7 @@ body{
 }
 .topic-8 .content{
     min-height: 600px;
+    position: relative;
 }
 .topic-8 table{
     width: 100%;
@@ -306,6 +307,20 @@ body{
     color: #fff6ed;
     background-color: #2b3040;
     padding: 4rem 2rem;
+}
+.topic-8 img{
+    position: absolute;
+    max-width: 25%;
+    right: 20%;
+    top: -15%;
+    z-index: -1;
+}
+@media(max-width: 1000px){
+    .topic-8 img{
+        position: static;
+        max-width: 50%;
+        margin-bottom: 50px;
+    }
 }
 .topic-9 .header{
     margin-bottom: 20px;

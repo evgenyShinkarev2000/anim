@@ -67,14 +67,17 @@ function combineAnimeClasses(animeElements, animeExecClasses, strCss) {
         animeElement.style.animationName = animeNames.join(", ");
     });
 }
-function setAnimeStartAtScroll(animeElements) {
+function setAnimeStartAtScroll(animeElements, animeStartClass) {
     const screenHeight = document.documentElement.clientHeight;
     const topStart = screenHeight / 3 * 2;
     animeElements.forEach(animeElement => {
         const animeElementOffset = offset(animeElement);
+        let wasAnime = false;
         addEventListener("scroll", () => {
-            if (screenHeight + scrollY > animeElementOffset.bottom || topStart + scrollY > animeElementOffset.top)
-                animeElement.style.animationPlayState = "running";
+            if (!wasAnime && (screenHeight + scrollY > animeElementOffset.bottom || topStart + scrollY > animeElementOffset.top)) {
+                wasAnime = true;
+                animeElement.classList.add(animeStartClass);
+            }
         });
     });
 }
@@ -88,7 +91,7 @@ async function initAnimation(nameCSS) {
     const animeExecClasses = selectors[1];
     const animeElements = selectElementsToAnime(animeExecClasses);
     combineAnimeClasses(animeElements, animeExecClasses, strCSS);
-    setAnimeStartAtScroll(animeElements);
+    setAnimeStartAtScroll(animeElements, animeStartClass);
     console.log(animeStartClass + " class used for anime start");
     console.log(animeExecClasses + " classes used for define anime");
     console.log(animeElements + " elements from html page, which will anime");

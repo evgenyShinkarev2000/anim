@@ -4,18 +4,20 @@ import { offset } from "./slider.js";
     const topic8 = document.querySelector(".topic-8")
     const shows = topic8.querySelectorAll(".show")
     const hiddens = topic8.querySelectorAll(".hidden")
+    const img = topic8.querySelector("img");
     let timer = null;
 
     const len = Math.min(shows.length, hiddens.length)
     for (let i = 0; i < len; i++) {
         shows[i].addEventListener("mouseover", () => {
-            const element = hiddens[i];
-            element.style.display = "block";
-            let opacity = 0;
+            const textBlockElement = hiddens[i];
+            textBlockElement.style.display = "block";
+            let textBlockOpacity = 0;
             timer = setInterval(() => {
-                opacity += 0.01;
-                element.style.opacity = opacity;
-                if (opacity >= 1)
+                textBlockOpacity += 0.01;
+                textBlockElement.style.opacity = textBlockOpacity;
+                img.style.opacity = 1 - textBlockOpacity;
+                if (textBlockOpacity >= 1)
                     clearInterval(timer);
             })
         })
@@ -24,6 +26,7 @@ import { offset } from "./slider.js";
                 clearInterval(timer);
             const element = hiddens[i];
             element.style.opacity = "0";
+            img.style.opacity = 1;
             element.style.display = "none";
         })
     }
@@ -84,7 +87,7 @@ function doAnimeWithClassAtScrollWithInterDelay(specifiedScrollY, className, del
 
 (function animeTopic7(){
     const topic = document.querySelector(".topic-7");
-    const beginAnim = offset(topic).top - document.documentElement.clientHeight / 2;
+    const beginAnim = offset(topic).top + document.documentElement.clientHeight / 3;
     doAnimeWithClassAtScrollWithInterDelay(beginAnim, "anime-collapse-img", 500, topic.querySelectorAll(".collapse-img"), {wasAnime: false});
     doAnimeWithClassAtScrollWithInterDelay(beginAnim, "anime-transparent", 500, topic.querySelectorAll(".transparent"), {wasAnime: false});
 })()

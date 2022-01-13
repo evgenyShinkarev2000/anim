@@ -1,13 +1,14 @@
 .go{
-    animation-play-state: running;
+    animation-play-state: running !important;
 }
-/* RegExp doesn't work animation-name is at new line */
+
 .move-from-right-shift,
 .move-from-left-shift,
 .smooth-appearance,
 .roll-180,
 .roll-360,
-.from-collapse-to-auto-size{
+.from-collapse-to-auto-size,
+.roll-15-left{
     animation-play-state: paused;
     animation-duration: 1s;
 }
@@ -33,8 +34,7 @@
         right: 0;
     }
 }
-.smooth-appearance{
-    animation-name: smooth-appearance;}
+.smooth-appearance{animation-name: smooth-appearance;}
 @keyframes smooth-appearance {
     0%{
         opacity: 0;
@@ -45,4 +45,29 @@
     100%{
         opacity: 1;
     }
+}
+.roll-180{ animation-name: roll-180;}
+@keyframes roll-180 {
+    from{transform: rotate(180deg);}
+    to{transform: rotate(360deg);}
+}
+.roll-360{ animation-name: roll-360;}
+@keyframes roll-360 {
+    from{}
+    to{ transform: rotate(360deg); }
+}
+.from-collapse-to-auto-size{animation-name: from-collapse-to-auto-size;}
+@keyframes from-collapse-to-auto-size {
+    from{
+        max-width: 0;
+        max-height: 0;
+    }
+    to{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.roll-15-left.go{
+    transition: 1s;
+    transform: rotate(-15deg);
 }
