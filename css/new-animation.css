@@ -11,32 +11,38 @@
     animation-play-state: paused;
     animation-duration: 1s;
 }
+.move-from-left-shift,
+.move-from-right-shift{
+    position: relative;
+}
 .move-from-left-shift{animation-name: move-from-left-shift;}
 @keyframes move-from-left-shift {
     from{
-        position: relative;
         left: -200%;
     }
     to{
-        left: unset;
+        left: 0;
     }
 }
 .move-from-right-shift{ animation-name: move-from-right-shift;}
 @keyframes move-from-right-shift {
     from{
-        position: relative;
-        right: 200%;
+        right: -200%;
     }
     to{
-        right: unset;
+        right: 0;
     }
 }
-.smooth-appearance{animation-name: smooth-appearance; }
+.smooth-appearance{
+    animation-name: smooth-appearance;}
 @keyframes smooth-appearance {
-    from{
+    0%{
         opacity: 0;
     }
-    to{
+    75%{
+        opacity: 0.5;
+    }
+    100%{
         opacity: 1;
     }
 }
