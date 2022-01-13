@@ -87,7 +87,7 @@ function doAnimeWithClassAtScrollWithInterDelay(specifiedScrollY, className, del
 
 (function animeTopic7(){
     const topic = document.querySelector(".topic-7");
-    const beginAnim = offset(topic).top + document.documentElement.clientHeight / 3;
+    const beginAnim = offset(topic).top - document.documentElement.clientHeight / 3;
     doAnimeWithClassAtScrollWithInterDelay(beginAnim, "anime-collapse-img", 500, topic.querySelectorAll(".collapse-img"), {wasAnime: false});
     doAnimeWithClassAtScrollWithInterDelay(beginAnim, "anime-transparent", 500, topic.querySelectorAll(".transparent"), {wasAnime: false});
 })()
