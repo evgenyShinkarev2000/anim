@@ -56,7 +56,6 @@ function combineAnimeClasses(animeElements, animeExecClasses, strCss) {
     const selectorValueDict = makeSelectorPropertyValueDict(animeExecClasses, "animation-name", strCss);
     animeElements.forEach(animeElement => {
         const intersectAnimeClasses = [];
-        debugger;
         animeElement.classList.forEach(className => {
             if (animeExecClasses.includes(className))
                 intersectAnimeClasses.push(className);
