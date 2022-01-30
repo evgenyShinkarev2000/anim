@@ -1,0 +1,25 @@
+.block{
+    margin-bottom: 50px;
+}
+.answer{
+    border-radius: 5px;
+
+}
+.answer:focus{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline:none;
+    outline: 2px solid #eed0d1;
+}
+.right{
+    background-color: lightgreen;
+}
+.wrong{
+    background-color: lightcoral;
+}
+.submit-button{
+    margin-top: 2rem;
+    border-radius: 10px;
+    border: 3px solid #adadad;
+    padding: 5px 10px;
+}
